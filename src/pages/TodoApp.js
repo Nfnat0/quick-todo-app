@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ResizableBox } from 'react-resizable';
 import TodoInput from '../components/TodoInput';
 import TodoList from '../components/TodoList';
 import 'react-resizable/css/styles.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import '../styles.css'; // Corrected import path
+import '../styles.css';
 import IconButton from '@material-ui/core/IconButton';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
@@ -47,17 +46,17 @@ function TodoApp() {
   };
 
   return (
-    <ResizableBox width={400} height={600} minConstraints={[300, 300]} maxConstraints={[800, 800]}>
-      <div className="todo-app">
-        <h1>Todo List</h1>
-        <TodoInput addTodo={addTodo} />
-        <IconButton
-          color="primary"
-          onClick={toggleShowCompleted}
-          className="toggle-completed-icon"
-        >
-          {showCompleted ? <VisibilityOffIcon /> : <VisibilityIcon />}
-        </IconButton>
+    <div className="todo-app">
+      <h1>Todo List</h1>
+      <TodoInput addTodo={addTodo} />
+      <IconButton
+        color="primary"
+        onClick={toggleShowCompleted}
+        className="toggle-completed-icon"
+      >
+        {showCompleted ? <VisibilityOffIcon /> : <VisibilityIcon />}
+      </IconButton>
+      <div className="todo-list-container">
         <TodoList
           todos={todos}
           toggleTodo={toggleTodo}
@@ -66,7 +65,7 @@ function TodoApp() {
           showCompleted={showCompleted}
         />
       </div>
-    </ResizableBox>
+    </div>
   );
 }
 

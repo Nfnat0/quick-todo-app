@@ -33,6 +33,25 @@ body, html {
   font-family: 'Open Sans', sans-serif;
 }
 
+.todo-app {
+  width: 500px; /* Adjust the width as needed */
+  height: 700px; /* Adjust the height as needed */
+  margin: 0 auto;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.todo-list-container {
+  height: calc(100% - 120px); /* Adjust the height calculation based on the size of other elements */
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.todo-list-container::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
+
 /* Input container styles */
 .todo-input {
   display: flex;
