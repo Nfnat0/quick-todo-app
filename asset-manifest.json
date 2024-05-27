@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/quick-todo-app/static/css/main.632d889b.css",
+    "main.js": "/quick-todo-app/static/js/main.938ba60a.js",
+    "static/js/453.ac79db8d.chunk.js": "/quick-todo-app/static/js/453.ac79db8d.chunk.js",
+    "index.html": "/quick-todo-app/index.html",
+    "main.632d889b.css.map": "/quick-todo-app/static/css/main.632d889b.css.map",
+    "main.938ba60a.js.map": "/quick-todo-app/static/js/main.938ba60a.js.map",
+    "453.ac79db8d.chunk.js.map": "/quick-todo-app/static/js/453.ac79db8d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.632d889b.css",
+    "static/js/main.938ba60a.js"
+  ]
+}
