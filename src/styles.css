@@ -55,11 +55,6 @@ body, html {
   border-color: #007bff;
 }
 
-.add-button {
-  margin-left: 10px;
-  border-radius: 20px; /* Rounded button */
-}
-
 /* Icon button styles */
 .toggle-completed-icon {
   margin-bottom: 20px;
