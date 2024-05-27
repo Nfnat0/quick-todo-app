@@ -1,84 +1,139 @@
+/* Set background image and global styles */
 body, html {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-  }
-  
-  .app {
-    width: 25vw;
-    min-width: 300px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-  }
-  
-  .todo-app h1 {
-    text-align: center;
-  }
-  
-  .todo-input {
-    display: flex;
-    margin-bottom: 20px;
-  }
-  
-  .todo-input input {
-    flex: 1;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  .todo-input button {
-    margin-left: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    background-color: #007bff;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .todo-input button:hover {
-    background-color: #0056b3;
-  }
-  
-  .todo-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .todo-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .todo-item span {
-    cursor: pointer;
-  }
-  
-  .todo-item button {
-    padding: 5px 10px;
-    font-size: 14px;
-    border: 1px solid #ddd;
-    background-color: #dc3545;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .todo-item button:hover {
-    background-color: #c82333;
-  }
-  
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../public/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff; /* White text color */
+  background-color: #121212; /* Dark background color */
+}
+
+/* App container styles */
+.app {
+  background-color: rgba(18, 18, 18, 0.9); /* Semi-transparent dark background */
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Header styles */
+.todo-app h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff; /* White text color */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Input container styles */
+.todo-input {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* Input field styles */
+.todo-input input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  outline: none;
+  background-color: #333; /* Dark background color for input */
+  color: #ffffff; /* White text color for input */
+  transition: border-color 0.3s ease;
+}
+
+.todo-input input:focus {
+  border-color: #007bff;
+}
+
+/* Button styles */
+.todo-input button {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.todo-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Todo list styles */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Todo item styles */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.todo-item span {
+  cursor: pointer;
+  flex: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Todo item input field styles */
+.todo-item input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  outline: none;
+  background-color: #333;
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+}
+
+.todo-item input:focus {
+  border-color: #007bff;
+}
+
+/* Actions container styles */
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Action button styles */
+.todo-actions button {
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  color: #ffffff; /* White text color */
+}
+
+.todo-actions button:hover {
+  color: #007bff;
+}
+
+.todo-actions button:last-child:hover {
+  color: #28a745;
+}

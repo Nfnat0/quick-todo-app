@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { ResizableBox } from 'react-resizable';
 import TodoInput from '../components/TodoInput';
 import TodoList from '../components/TodoList';
+import 'react-resizable/css/styles.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function TodoApp() {
   const [todos, setTodos] = useState(() => {
@@ -27,12 +30,20 @@ function TodoApp() {
     setTodos(newTodos);
   };
 
+  const editTodo = (index, newText) => {
+    const newTodos = [...todos];
+    newTodos[index].text = newText;
+    setTodos(newTodos);
+  };
+
   return (
-    <div className="todo-app">
-      <h1>Todo List</h1>
-      <TodoInput addTodo={addTodo} />
-      <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
-    </div>
+    <ResizableBox width={400} height={600} minConstraints={[300, 300]} maxConstraints={[800, 800]}>
+      <div className="todo-app">
+        <h1>Todo List</h1>
+        <TodoInput addTodo={addTodo} />
+        <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} editTodo={editTodo} />
+      </div>
+    </ResizableBox>
   );
 }
 
