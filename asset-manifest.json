@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/quick-todo-app/static/css/main.7582f74c.css",
-    "main.js": "/quick-todo-app/static/js/main.d804a1b0.js",
+    "main.css": "/quick-todo-app/static/css/main.dd25d9e1.css",
+    "main.js": "/quick-todo-app/static/js/main.7f598449.js",
     "static/js/453.061517d3.chunk.js": "/quick-todo-app/static/js/453.061517d3.chunk.js",
     "static/media/background.jpg": "/quick-todo-app/static/media/background.9300f9d4b78e2c021059.jpg",
     "static/media/fa-solid-900.ttf": "/quick-todo-app/static/media/fa-solid-900.bacd5de623fb563b961a.ttf",
@@ -13,12 +13,12 @@
     "static/media/fa-v4compatibility.ttf": "/quick-todo-app/static/media/fa-v4compatibility.c8e090db312b0bea2aa2.ttf",
     "static/media/fa-v4compatibility.woff2": "/quick-todo-app/static/media/fa-v4compatibility.cf7f5903d06b79ad60f1.woff2",
     "index.html": "/quick-todo-app/index.html",
-    "main.7582f74c.css.map": "/quick-todo-app/static/css/main.7582f74c.css.map",
-    "main.d804a1b0.js.map": "/quick-todo-app/static/js/main.d804a1b0.js.map",
+    "main.dd25d9e1.css.map": "/quick-todo-app/static/css/main.dd25d9e1.css.map",
+    "main.7f598449.js.map": "/quick-todo-app/static/js/main.7f598449.js.map",
     "453.061517d3.chunk.js.map": "/quick-todo-app/static/js/453.061517d3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7582f74c.css",
-    "static/js/main.d804a1b0.js"
+    "static/css/main.dd25d9e1.css",
+    "static/js/main.7f598449.js"
   ]
 }
