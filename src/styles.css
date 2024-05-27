@@ -9,7 +9,7 @@ body, html {
   background-image: url('../public/images/background.jpg');
   background-size: cover;
   background-position: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: Arial, sans-serif;
   color: #ffffff; /* White text color */
   background-color: #121212; /* Dark background color */
 }
@@ -34,16 +34,17 @@ body, html {
 }
 
 .todo-app {
-  width: 500px; /* Adjust the width as needed */
-  height: 700px; /* Adjust the height as needed */
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   padding: 20px;
   overflow: hidden;
+  position: relative;
 }
 
 .todo-list-container {
-  height: calc(100% - 120px); /* Adjust the height calculation based on the size of other elements */
-  overflow-y: scroll;
+  flex: 1;
+  overflow-y: auto;
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
 }

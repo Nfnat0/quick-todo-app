@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ResizableBox } from 'react-resizable';
 import TodoInput from '../components/TodoInput';
 import TodoList from '../components/TodoList';
 import 'react-resizable/css/styles.css';
@@ -46,7 +47,14 @@ function TodoApp() {
   };
 
   return (
-    <div className="todo-app">
+    <ResizableBox
+      className="todo-app"
+      width={400}
+      height={600}
+      minConstraints={[300, 400]}
+      maxConstraints={[1500, 1000]}
+      resizeHandles={['se']}
+    >
       <h1>Todo List</h1>
       <TodoInput addTodo={addTodo} />
       <IconButton
@@ -65,7 +73,7 @@ function TodoApp() {
           showCompleted={showCompleted}
         />
       </div>
-    </div>
+    </ResizableBox>
   );
 }
 
