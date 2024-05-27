@@ -4,8 +4,8 @@ import TodoInput from '../components/TodoInput';
 import TodoList from '../components/TodoList';
 import 'react-resizable/css/styles.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import '../styles.css'; // Ensure you import the styles.css file
-import Button from '@material-ui/core/Button';
+import '../styles.css'; // Corrected import path
+import IconButton from '@material-ui/core/IconButton';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 
@@ -51,15 +51,13 @@ function TodoApp() {
       <div className="todo-app">
         <h1>Todo List</h1>
         <TodoInput addTodo={addTodo} />
-        <Button
-          variant="contained"
+        <IconButton
           color="primary"
           onClick={toggleShowCompleted}
-          startIcon={showCompleted ? <VisibilityOffIcon /> : <VisibilityIcon />}
-          className="toggle-completed"
+          className="toggle-completed-icon"
         >
-          {showCompleted ? 'Hide Completed' : 'Show Completed'}
-        </Button>
+          {showCompleted ? <VisibilityOffIcon /> : <VisibilityIcon />}
+        </IconButton>
         <TodoList
           todos={todos}
           toggleTodo={toggleTodo}

@@ -55,10 +55,15 @@ body, html {
   border-color: #007bff;
 }
 
-/* Toggle button styles */
-.toggle-completed {
+.add-button {
+  margin-left: 10px;
+  border-radius: 20px; /* Rounded button */
+}
+
+/* Icon button styles */
+.toggle-completed-icon {
   margin-bottom: 20px;
-  width: 100%;
+  align-self: flex-end; /* Align to the right */
 }
 
 /* Todo list styles */
@@ -81,6 +86,13 @@ body, html {
   cursor: pointer;
   flex: 1;
   font-family: 'Open Sans', sans-serif;
+}
+
+/* Completed todo item styles */
+.todo-item.completed {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighter background for completed tasks */
+  color: #999; /* Lighter text color for completed tasks */
+  text-decoration: line-through;
 }
 
 /* Todo item input field styles */

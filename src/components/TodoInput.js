@@ -25,6 +25,7 @@ function TodoInput({ addTodo }) {
         variant="contained"
         color="primary"
         startIcon={<AddIcon />}
+        className="add-button"
       >
         Add
       </Button>

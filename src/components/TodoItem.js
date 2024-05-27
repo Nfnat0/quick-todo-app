@@ -18,7 +18,7 @@ function TodoItem({ todo, index, toggleTodo, deleteTodo, editTodo }) {
   };
 
   return (
-    <li className="todo-item">
+    <li className={`todo-item ${todo.completed ? 'completed' : ''}`}>
       {isEditing ? (
         <input
           type="text"
