@@ -1,10 +1,13 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-function TodoList({ todos, toggleTodo, deleteTodo, editTodo }) {
+function TodoList({ todos, toggleTodo, deleteTodo, editTodo, showCompleted }) {
+  // Filter todos based on the showCompleted flag
+  const filteredTodos = showCompleted ? todos : todos.filter(todo => !todo.completed);
+
   return (
     <ul className="todo-list">
-      {todos.map((todo, index) => (
+      {filteredTodos.map((todo, index) => (
         <TodoItem
           key={index}
           index={index}

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
 
 function TodoInput({ addTodo }) {
   const [value, setValue] = useState('');
@@ -18,7 +20,14 @@ function TodoInput({ addTodo }) {
         onChange={(e) => setValue(e.target.value)}
         placeholder="Add a new todo"
       />
-      <button type="submit">Add</button>
+      <Button
+        type="submit"
+        variant="contained"
+        color="primary"
+        startIcon={<AddIcon />}
+      >
+        Add
+      </Button>
     </form>
   );
 }
