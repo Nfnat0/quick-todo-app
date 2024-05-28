@@ -8,6 +8,7 @@ import '../styles.css';
 import IconButton from '@material-ui/core/IconButton';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
+import DeleteSweepIcon from '@material-ui/icons/DeleteSweep';
 
 function TodoApp() {
   const [todos, setTodos] = useState(() => {
@@ -36,6 +37,10 @@ function TodoApp() {
     setTodos(newTodos);
   };
 
+  const deleteAllTodos = () => {
+    setTodos([]);
+  };
+
   const editTodo = (index, newText) => {
     const newTodos = [...todos];
     newTodos[index].text = newText;
@@ -57,13 +62,22 @@ function TodoApp() {
     >
       <h1>Todo List</h1>
       <TodoInput addTodo={addTodo} />
-      <IconButton
-        color="primary"
-        onClick={toggleShowCompleted}
-        className="toggle-completed-icon"
-      >
-        {showCompleted ? <VisibilityOffIcon /> : <VisibilityIcon />}
-      </IconButton>
+      <div className="buttons-container">
+          <IconButton
+            color="secondary"
+            onClick={deleteAllTodos}
+            className="delete-all-button"
+          >
+            <DeleteSweepIcon />
+          </IconButton>
+          <IconButton
+            color="primary"
+            onClick={toggleShowCompleted}
+            className="toggle-completed-icon"
+          >
+            {showCompleted ? <VisibilityOffIcon /> : <VisibilityIcon />}
+          </IconButton>
+        </div>
       <div className="todo-list-container">
         <TodoList
           todos={todos}

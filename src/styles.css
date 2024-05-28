@@ -82,10 +82,22 @@ body, html {
   height: 40px;
 }
 
+/* Buttons container styles */
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
 /* Icon button styles */
 .toggle-completed-icon {
-  margin-bottom: 20px;
   align-self: flex-end; /* Align to the right */
+}
+
+.delete-all-button {
+  align-self: flex-end; /* Align to the right */
+  color: #f50057; /* Red color for delete button */
 }
 
 /* Todo list styles */
