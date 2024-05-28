@@ -21,12 +21,11 @@ function TodoInput({ addTodo }) {
         placeholder="Add a new todo"
       />
       <Button
-        type="submit"
-        variant="contained"
-        color="primary"
-        startIcon={<AddIcon />}
+      type="submit"
+      variant="contained"
+      color="primary"
       >
-        Add
+        <AddIcon />
       </Button>
     </form>
   );

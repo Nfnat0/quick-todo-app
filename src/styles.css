@@ -75,6 +75,13 @@ body, html {
   border-color: #007bff;
 }
 
+.todo-input Button {
+  margin-left: 10px;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+}
+
 /* Icon button styles */
 .toggle-completed-icon {
   margin-bottom: 20px;
