@@ -9,6 +9,12 @@ import IconButton from '@material-ui/core/IconButton';
 import VisibilityIcon from '@material-ui/icons/Visibility';
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff';
 import DeleteSweepIcon from '@material-ui/icons/DeleteSweep';
+import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
 
 function TodoApp() {
   const [todos, setTodos] = useState(() => {
@@ -17,6 +23,7 @@ function TodoApp() {
   });
 
   const [showCompleted, setShowCompleted] = useState(true);
+  const [openDialog, setOpenDialog] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -39,6 +46,7 @@ function TodoApp() {
 
   const deleteAllTodos = () => {
     setTodos([]);
+    handleCloseDialog();
   };
 
   const editTodo = (index, newText) => {
@@ -51,6 +59,14 @@ function TodoApp() {
     setShowCompleted(!showCompleted);
   };
 
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
   return (
     <ResizableBox
       className="todo-app"
@@ -60,12 +76,12 @@ function TodoApp() {
       maxConstraints={[1500, 1000]}
       resizeHandles={['se']}
     >
-      <h1>Todo List</h1>
-      <TodoInput addTodo={addTodo} />
-      <div className="buttons-container">
+        <h1>Todo List</h1>
+        <TodoInput addTodo={addTodo} />
+        <div className="buttons-container">
           <IconButton
             color="secondary"
-            onClick={deleteAllTodos}
+            onClick={handleOpenDialog}
             className="delete-all-button"
           >
             <DeleteSweepIcon />
@@ -86,6 +102,29 @@ function TodoApp() {
           editTodo={editTodo}
           showCompleted={showCompleted}
         />
+
+        {/* Confirmation Dialog */}
+        <Dialog
+          open={openDialog}
+          onClose={handleCloseDialog}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description"
+        >
+          <DialogTitle id="alert-dialog-title">{"Delete All Todos?"}</DialogTitle>
+          <DialogContent>
+            <DialogContentText id="alert-dialog-description">
+              Are you sure you want to delete all todos? This action cannot be undone.
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog} color="primary">
+              Cancel
+            </Button>
+            <Button onClick={deleteAllTodos} color="secondary" autoFocus>
+              Delete All
+            </Button>
+          </DialogActions>
+        </Dialog>
       </div>
     </ResizableBox>
   );
